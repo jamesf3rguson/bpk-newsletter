@@ -5,9 +5,9 @@
   so please refer to [it's documentation](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
   for more usage information.
 
-# [_Put your project name here_]
+# [Backpack newsletter]
 
-[_Add a brief description of your project here._]
+[Backpack's newsletters with updates on all things backpack]
 
 ## npm script commands
 
