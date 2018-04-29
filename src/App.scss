@@ -1,30 +1,183 @@
 @import '~bpk-mixins';
 
 .App {
-  text-align: center;
+  background-color: $bpk-color-gray-50;
 
-  &__header {
-    padding: $bpk-spacing-xl 0;
-    background-color: $bpk-color-blue-500;
-    background-image: $bpk-primary-gradient;
-    color: $bpk-color-white;
+  &__wrapper {
+    max-width: $bpk-spacing-lg * 20;
+    margin: 0 auto;
+  }
 
-    @include bpk-box-shadow-sm;
+  &__row {
+    padding: $bpk-spacing-base;
 
-    @include bpk-breakpoint-mobile {
-      padding: $bpk-spacing-base 0;
+    @include bpk-breakpoint-above-mobile {
+      padding: $bpk-spacing-xl;
+    }
+
+    background-color: $bpk-color-gray-100;
+
+    &:nth-child(even) {
+      background-color: $bpk-color-white;
+    }
+
+    &--intro {
+      padding: $bpk-spacing-lg * 2 $bpk-spacing-base;
+      background-color: $bpk-color-white;
     }
   }
 
-  &__main {
-    padding: $bpk-spacing-base 0;
+  &__header {
+    width: 100%;
+    height: 200px;
+    background-image: url('http://jamesferguson.co.uk/bpk-newsletter/header-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include bpk-breakpoint-above-mobile {
+      width: 100%;
+      height: 300px;
+      background-image: url('http://jamesferguson.co.uk/bpk-newsletter/header-bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    // this is some weird stuff
+    &--content {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      height: 100%;
+      background-image: url('http://jamesferguson.co.uk/bpk-newsletter/header-content.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      @include bpk-breakpoint-above-mobile {
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+        height: 100%;
+        background-image: url('http://jamesferguson.co.uk/bpk-newsletter/header-content.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+      }
+    }
   }
 
-  &__heading {
-    margin-bottom: $bpk-spacing-sm;
+  &__greeting {
+    margin: 0 0 $bpk-spacing-sm 0;
+
+    @include bpk-text-xl;
+
+    font-weight: bold;
   }
 
-  &__text {
-    margin-bottom: $bpk-spacing-sm;
+  &__sub-header {
+    margin: 0 0 $bpk-spacing-sm 0;
+    text-transform: uppercase;
+
+    @include bpk-text-base;
+
+    font-weight: bold;
+
+    &::after {
+      content: '';
+      display: block;
+      width: $bpk-spacing-lg;
+      height: $bpk-one-pixel-rem * 3;
+      margin: $bpk-spacing-sm 0 $bpk-spacing-lg 0;
+      background-color: $bpk-color-blue-500;
+    }
+  }
+
+  &__para {
+    margin-top: 0;
+
+    &--intro {
+      margin: 0;
+      color: $bpk-color-gray-500;
+
+      @include bpk-text-lg;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &--highlights {
+      padding: 0 0 0 $bpk-spacing-base;
+      list-style-type: disc;
+    }
+  }
+
+  &__list-item {
+    display: block;
+    margin: 0 auto $bpk-spacing-base auto;
+    padding: $bpk-spacing-base;
+    border-radius: $bpk-border-radius-sm;
+    text-align: center;
+
+    @include bpk-border-sm($bpk-color-gray-50)
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    @include bpk-breakpoint-above-mobile {
+      display: inline-block;
+      width: 32%;
+      margin-right: $bpk-spacing-xs;
+      margin-bottom: 0;
+      border: none;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      padding: $bpk-spacing-xs $bpk-spacing-sm;
+      background-color: $bpk-color-gray-700;
+      color: $bpk-color-white;
+      text-align: left;
+
+      @include bpk-text-sm;
+
+      @include bpk-breakpoint-above-mobile {
+        @include bpk-text-base;
+      }
+
+      font-weight: bold;
+    }
+
+    td {
+      padding: $bpk-spacing-xs $bpk-spacing-sm;
+
+      @include bpk-text-sm;
+
+      @include bpk-breakpoint-above-mobile {
+        @include bpk-text-base;
+      }
+    }
+
+    tr {
+      background-color: $bpk-color-gray-50;
+
+      &:nth-child(even) {
+        background-color: $bpk-color-white;
+      }
+    }
   }
 }
