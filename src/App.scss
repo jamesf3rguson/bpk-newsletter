@@ -10,12 +10,11 @@
 
   &__row {
     padding: $bpk-spacing-base;
+    background-color: $bpk-color-gray-100;
 
     @include bpk-breakpoint-above-mobile {
       padding: $bpk-spacing-xl;
     }
-
-    background-color: $bpk-color-gray-100;
 
     &:nth-child(even) {
       background-color: $bpk-color-white;
@@ -29,28 +28,27 @@
 
   &__header {
     width: 100%;
-    height: 200px;
+    height: $bpk-one-pixel-rem * 200;
     background-image: url('http://jamesferguson.co.uk/bpk-newsletter/header-bg.png');
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
 
     @include bpk-breakpoint-above-mobile {
       width: 100%;
-      height: 300px;
+      height: $bpk-one-pixel-rem * 300;
       background-image: url('http://jamesferguson.co.uk/bpk-newsletter/header-bg.png');
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
+      background-size: cover;
     }
-
 
     // this is some weird stuff
     &--content {
       display: block;
-      margin: 0 auto;
       width: 70%;
       height: 100%;
+      margin: 0 auto;
       background-image: url('http://jamesferguson.co.uk/bpk-newsletter/header-content.png');
       background-repeat: no-repeat;
       background-position: center;
@@ -58,14 +56,13 @@
 
       @include bpk-breakpoint-above-mobile {
         display: block;
-        margin: 0 auto;
         width: 60%;
         height: 100%;
+        margin: 0 auto;
         background-image: url('http://jamesferguson.co.uk/bpk-newsletter/header-content.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-
       }
     }
   }
@@ -108,8 +105,8 @@
   }
 
   &__list {
-    padding: 0;
     margin: 0;
+    padding: 0;
     list-style: none;
 
     &--highlights {
@@ -127,7 +124,7 @@
 
     @include bpk-border-sm($bpk-color-gray-50)
 
-    &:last-child {
+      &:last-child {
       margin-right: 0;
       margin-bottom: 0;
     }
